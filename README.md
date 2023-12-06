@@ -1,8 +1,8 @@
-# React + Vite
+# BIT Assignment 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### This is a Simple web app used to display the records of the employees. 
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### The datasets available was in the csv format. So I firstly Converted it into json and maked an api endpoint for it .
+
+## API Endpoint : GET : https://json-data-red.vercel.app

@@ -6,12 +6,20 @@ import { useContext, useState } from 'react';
 
 
 import MyContext from "../context/user.context.js"
+import axios from 'axios';
 
 function Login() { 
+  async function getData  ()   {
+    console.log("sdfkbnsdkfn")
 
 
+
+  }
+  getData();
+  
+  
   const navigate = useNavigate();
-
+  
   const { userData , setUserData} = useContext(MyContext)
   const [data, setData] = useState({
     email: "",

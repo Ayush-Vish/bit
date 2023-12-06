@@ -19,12 +19,12 @@ function GenderChart ()  {
 
         
 
-        const csvjson = await response.data;
-        const noOfEmployees = csvjson.length;
-        const noOfMales = csvjson.filter( (e) => e.GenderID ==1  ).length ;
+        const data = await response.data;
+        const noOfEmployees = data.length;
+        const noOfMales = data.filter( (e) => e.GenderID ==1  ).length ;
 
         const noOfFemales = noOfEmployees - noOfMales; 
-        const marriedEmployees = csvjson.filter((e) => e.MaritalDesc === "Married").length;
+        const marriedEmployees = data.filter((e) => e.MaritalDesc === "Married").length;
         
 
 

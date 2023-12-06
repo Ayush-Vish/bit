@@ -12,20 +12,20 @@ function TimingChart ( )  {
         const response = await axios.get("https://json-data-red.vercel.app");
         
 
-        const csvjson = await response.data;
+        const data = await response.data;
        
 
-        const absentZeroDays = csvjson.filter((e)=> e.Absences == 0).length ;
-        const absentOneToFive= csvjson.filter((e)=> e.Absences>=1 && e.Absences <=5).length;
-        const absentSixToTen= csvjson.filter((e)=> e.Absences>=6 && e.Absences <=10).length;
-        const absent11To15= csvjson.filter((e)=> e.Absences>=11 && e.Absences <=15).length;
-        const absentMoreThan16= csvjson.filter((e)=> e.Absences>=16 ).length;
+        const absentZeroDays = data.filter((e)=> e.Absences == 0).length ;
+        const absentOneToFive= data.filter((e)=> e.Absences>=1 && e.Absences <=5).length;
+        const absentSixToTen= data.filter((e)=> e.Absences>=6 && e.Absences <=10).length;
+        const absent11To15= data.filter((e)=> e.Absences>=11 && e.Absences <=15).length;
+        const absentMoreThan16= data.filter((e)=> e.Absences>=16 ).length;
 
 
-        const DaysLateZero = csvjson.filter((e)=> e.DaysLateLast30 == 0 ).length;
-        const DaysLateOne = csvjson.filter((e)=> e.DaysLateLast30 == 1 ).length;
-        const DaysLateTwo= csvjson.filter((e)=> e.DaysLateLast30 == 2).length;
-        const DaysLateMoreThan2 = csvjson.filter((e)=> e.DaysLateLast30 >2 ).length;
+        const DaysLateZero = data.filter((e)=> e.DaysLateLast30 == 0 ).length;
+        const DaysLateOne = data.filter((e)=> e.DaysLateLast30 == 1 ).length;
+        const DaysLateTwo= data.filter((e)=> e.DaysLateLast30 == 2).length;
+        const DaysLateMoreThan2 = data.filter((e)=> e.DaysLateLast30 >2 ).length;
 
         setUserData({
             ...userData, 

@@ -11,7 +11,9 @@ function App() {
     name: "", 
     email :"",
     isLoggedIn :"", 
-    data :  {}
+    genderData :  {}, 
+    timingData :{}
+    
   })
 
   return (

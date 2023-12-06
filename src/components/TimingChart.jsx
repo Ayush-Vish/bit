@@ -87,7 +87,7 @@ function TimingChart ( )  {
             </div>
             <div className="gap-7 flex flex-col ">
 
-                <div className="flex sm:flex-col md:flex-row items-center justify-center shadow-2xl p-3">
+                <div className="flex flex-col lg:flex-row items-center justify-center shadow-2xl p-3">
                     <div className="text-3xl "><h2>No. of Days Absent  </h2></div>
 
                     <div className="w-[300px]">
@@ -104,15 +104,17 @@ function TimingChart ( )  {
 
                     </div>
                     </div>
-                    <div className="flex sm:flex-col md:flex-row items-center justify-center shadow-2xl p-3" >
+                    <div className="flex flex-col lg:flex-row items-center justify-center shadow-2xl p-3" >
                         <div className="text-3xl "><h2> Comes late in last 30 days </h2></div>
                         <div className="w-[300px]">
                             <Pie className="" data={lateData} />
                         </div>
                         <div>
-                            <div>Total Number of Employees : {userData?.genderData?.noOfEmployees}</div>
-                            <div> Total Number of Married Employees : {userData?.martialStatus?.marriedEmployees} </div>
-                            <div> Total Number of Females :   {userData?.martialStatus?.unmarriedEmployees} </div>
+                            <div> Zero Day :  {userData?.timingData?.DaysLateZero}</div>
+                            <div> One Days : {userData?.timingData?.DaysLateOne} </div>
+                            <div> Two Days :   {userData?.timingData?.DaysLateTwo} </div>
+                            <div> More than two Days :   {userData?.timingData?.DaysLateMoreThan2} </div>
+
                         </div>
                     </div>
             </div>

@@ -21,7 +21,6 @@ function GenderChart ()  {
 
         const csvjson = await response.data;
         const noOfEmployees = csvjson.length;
-        console.log(csvjson[0].Sex)    
         const noOfMales = csvjson.filter( (e) => e.GenderID ==1  ).length ;
 
         const noOfFemales = noOfEmployees - noOfMales; 
@@ -45,7 +44,6 @@ function GenderChart ()  {
 
 
         })
-        console.log(userData);
 
     } 
 
@@ -96,7 +94,7 @@ function GenderChart ()  {
             </div>
             <div className="flex flex-col gap-7">
 
-                <div className="flex sm:flex-col md:flex-row items-center justify-center shadow-2xl p-3">
+                <div className="flex flex-col  lg:flex-row items-center justify-center shadow-2xl p-3">
                     <div className="text-3xl"><h2>Gender</h2></div>
 
                     <div className="w-[300px]">
@@ -108,7 +106,7 @@ function GenderChart ()  {
                         <div> Total Number of Females :   {userData?.genderData?.noOfFemales} </div>
                     </div>
                 </div>
-                    <div className="flex sm:flex-col md:flex-row items-center justify-center shadow-2xl p-3">
+                    <div className="flex flex-col lg:flex-row items-center justify-center shadow-2xl p-3">
                         <div className="text-3xl "><h2>Martial Status </h2></div>
                         <div className="w-[300px]">
                             <Pie className="" data={martialStatus} />

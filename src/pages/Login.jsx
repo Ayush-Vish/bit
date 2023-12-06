@@ -9,15 +9,7 @@ import MyContext from "../context/user.context.js"
 import axios from 'axios';
 
 function Login() { 
-  async function getData  ()   {
-    console.log("sdfkbnsdkfn")
-
-
-
-  }
-  getData();
-  
-  
+ 
   const navigate = useNavigate();
   
   const { userData , setUserData} = useContext(MyContext)
@@ -44,7 +36,6 @@ function Login() {
       ...data, 
       isLoggedIn : true
     })
-    console.log(userData);
     
 
     
@@ -90,9 +81,7 @@ function Login() {
             <div>
               <button type="submit" className='bg-primary-grey py-2 px-3 rounded-lg hover:bg-primary-blue transition-all ease-in-out duration-300'>SignIn</button>
             </div>
-            <div>
-              <p>Dont have a Account ? {" "}  <Link className='text-green-500'  to="/signup" > SignUp </Link></p>
-            </div>
+            
 
 
 
